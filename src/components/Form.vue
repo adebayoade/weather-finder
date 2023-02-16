@@ -55,7 +55,7 @@ export default {
     this.isLoading = true;
     this.city = 'lagos';
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${this.city}&APPID=${
+      `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&APPID=${
         import.meta.env.VITE_OPENWEATHER_API_KEY
       }&units=metric`,
       {
