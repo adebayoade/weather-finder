@@ -1,29 +1,16 @@
-# adebayo-weatherFinder
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+1. Install node dependencies
+```
 npm install
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+2. Create .env file in root folder and add this
 ```
-
-### Compile and Minify for Production
-
-```sh
+VITE_OPENWEATHER_API_KEY={OpenWeather api token}
+```
+3. Compile for development mode
+```
+npm run serve
+```
+4. Compile for production mode
+```
 npm run build
 ```
