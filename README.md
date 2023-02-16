@@ -12,5 +12,5 @@ npm run serve
 ```
 4. Compile for production mode
 ```
-npm run build
+npm run dev
 ```
