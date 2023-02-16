@@ -75,7 +75,6 @@ export default {
       const data = await response.json();
       this.data = { ...data };
       this.isLoading = false;
-      console.log(this.data);
     }
   },
   methods: {
@@ -94,17 +93,19 @@ export default {
       );
 
       if (!response.ok) {
-        this.message.text = 'Unable to find city.';
+        const data = await response.json()
+        this.message.text = data.message;
         this.message.ok = false;
         this.removeMessage();
 
-        console.log(JSON.stringify(this.message));
+        console.log(data);
 
         this.isLoading = false;
       } else {
         const data = await response.json();
         this.data = { ...data };
         this.isLoading = false;
+        console.log(this.data);
       }
     },
     removeMessage() {
