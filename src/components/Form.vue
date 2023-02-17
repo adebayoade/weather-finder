@@ -28,7 +28,6 @@
             <p>{{ data.weather[0].description }}</p>
             <p>{{ data.sys.country }}</p>
             <p>{{ getDate }}</p>
-            <div id="icon"></div>
           </div>
           <div id="icon"><img id="wicon" width="80" :src="iconURL" alt="Weather icon" /></div>
         </div>
@@ -53,9 +52,8 @@ export default {
   },
   async mounted() {
     this.isLoading = true;
-    this.city = 'lagos';
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&APPID=${
+      `https://api.openweathermap.org/data/2.5/weather?q=lagos&APPID=${
         import.meta.env.VITE_OPENWEATHER_API_KEY
       }&units=metric`,
       {
@@ -105,7 +103,7 @@ export default {
         const data = await response.json();
         this.data = { ...data };
         this.isLoading = false;
-        console.log(this.data);
+        this.city = '';
       }
     },
     removeMessage() {
